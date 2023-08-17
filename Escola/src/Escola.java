@@ -6,20 +6,31 @@ public class Escola {
 		Aluno wallace;
 		Aluno c;
 		
+		Curso analiseSistemas;
+		Curso quimica;
+		Curso engenhariaCivil;
+		
+		analiseSistemas = new Curso(); //agora ele existe na memória, está instanciado
+		//o objeto de uma classe só pode receber instancias da mesma classe;
+		
+		quimica = new Curso();
+
+		engenhariaCivil = new Curso(); 
+		
 		arianny = new Aluno();
 		arianny.matricula = "2023008001";
 		arianny.nome = "Arianny da Silva";
-		arianny.curso = "TADS";
+		arianny.curso = analiseSistemas;
 		
 		isadora = new Aluno();
 		isadora.matricula = "2023008002";
-		isadora.nome = "Isadora Cidreira";
-		isadora.curso = "Licenciatura em Quimica";
+		isadora.nome = "Isadora Cerdeira";
+		isadora.curso = quimica;
 		
 		wallace = new Aluno();
 		wallace.matricula = "2023008003";
 		wallace.nome = "William Wallace";
-		wallace.curso = "Engenharia Civil";
+		wallace.curso = engenhariaCivil;
 
 		c = wallace;
 		
@@ -44,7 +55,7 @@ public class Escola {
 	
 	public static void mostrarAluno(Aluno aluno) {
 		System.out.printf("%s, de matricula %s é aluno(a) do curso %s.\n",
-				aluno.nome, aluno.matricula, aluno.curso);
+				aluno.nome, aluno.matricula, aluno.curso.nome);
 	}
 }
 
